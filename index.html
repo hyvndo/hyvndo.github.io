@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hyun Do Jung — Ph.D. Student in Artificial Intelligence at Yonsei University. Research on trustworthy computational pathology.">
+  <!-- Open Graph (link preview on KakaoTalk, Slack, Twitter, etc.) -->
+  <meta property="og:title" content="Hyun Do Jung">
+  <meta property="og:description" content="Ph.D. Student in AI at Yonsei University — Trustworthy Computational Pathology">
+  <meta property="og:image" content="https://hyvndo.github.io/assets/img/prof_pic.jpg">
+  <meta property="og:url" content="https://hyvndo.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>H</text></svg>">
+  <title>Hyun Do Jung</title>
+  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+</head>
+<body>
+
+<!-- Progress bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Hyun Do Jung</a>
+    <div class="nav-links">
+      <a href="#about" class="nav-link active">About</a>
+      <a href="#publications" class="nav-link">Publications</a>
+      <a href="#talks" class="nav-link">Talks & Teaching</a>
+      <a href="#education" class="nav-link">Education</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <main>
+    <!-- Bio -->
+    <section id="about" class="bio">
+      <div class="bio-inner">
+        <div class="bio-photo">
+          <img src="assets/img/prof_pic.jpg" alt="Hyun Do Jung">
+        </div>
+        <div class="bio-text">
+          <h1>Hyun Do Jung</h1>
+          <p class="korean-name">정현도</p>
+          <p class="tagline">Building trustworthy AI for computational pathology</p>
+          <p>
+            I am a Ph.D. student in Artificial Intelligence at Yonsei University, advised by
+            Prof. Hwiyoung Kim. I study how to make computational pathology models not only accurate
+            but also interpretable and robust — especially when labeled data is limited or the
+            data distribution shifts across institutions.
+          </p>
+          <p>
+            Specifically, I work on multiple instance learning (MIL), self-supervised pre-training,
+            and concept-based reasoning for whole slide image (WSI) analysis. Most of my recent work
+            asks: given a gigapixel pathology slide, can a model point to <em>which</em> regions
+            drove its prediction, and can we trust those explanations in real clinical settings?
+          </p>
+          <div class="tags">
+            <span class="tag">Computational Pathology</span>
+            <span class="tag">Multiple Instance Learning</span>
+            <span class="tag">Self-supervised Learning</span>
+            <span class="tag">Explainable AI</span>
+            <span class="tag">Weakly Supervised Learning</span>
+            <span class="tag">Medical Image Analysis</span>
+          </div>
+          <p class="internship-note">
+            <strong>I am currently looking for research internship opportunities in industry.</strong>
+            If my work resonates with yours, I would be glad to connect.
+          </p>
+          <div class="socials">
+            <a href="mailto:hyundo@yonsei.ac.kr" title="Email"><i class="fas fa-envelope"></i></a>
+            <!-- <a href="https://github.com/hyvndo" title="GitHub" target="_blank"><i class="fab fa-github"></i></a> -->
+            <a href="https://www.linkedin.com/in/hyundo/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=8XdTIg4AAAAJ" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <h3 class="pub-section-title">Selected Papers</h3>
+      <ul class="pub-list">
+
+        <li class="pub-item">
+          <span class="pub-title">FOCI: Finding Optimal Contextual Instances in Computational Pathology</span>
+          <div class="pub-authors">
+            <span class="self">Hyun Do Jung</span>, Jungwon Choi, Soojung Choi, Hwiyoung Kim
+          </div>
+          <div class="pub-badges">
+            <span class="pub-badge pub-badge-submitted">Submitted to ECCV 2026</span>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub-title">CASA: Concept-Attention Semantic Alignment Framework for Generalizable Multiple Instance Learning</span>
+          <div class="pub-authors">
+            Soojung Choi*, <span class="self">Hyun Do Jung*</span>, Dain Ji, Suk Jun Lee, Seho Park, Hwiyoung Kim
+          </div>
+          <div class="pub-badges">
+            <span class="pub-badge pub-badge-submitted">Submitted to MICCAI 2026</span>
+          </div>
+          <div class="pub-note">* Equal contribution</div>
+        </li>
+
+        <li class="pub-item">
+          <a class="pub-title" href="https://arxiv.org/abs/2601.10073" target="_blank">ReaMIL: Reasoning- and Evidence-Aware Multiple Instance Learning for Whole-Slide Histopathology</a>
+          <div class="pub-authors">
+            <span class="self">Hyun Do Jung</span>, Jungwon Choi, Hwiyoung Kim
+          </div>
+          <div class="pub-badges">
+            <span class="pub-badge pub-badge-venue">WACV 2026 Workshop</span>
+            <span class="pub-badge pub-badge-oral">&#x2605; Oral Presentation</span>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub-title">Comparing Adaptation Strategies Across Pathology Foundation Models: Model- and Data-Dependent Performance on Cross-Domain Breast Cancer Cohorts</span>
+          <div class="pub-authors">
+            <span class="self">Hyun Do Jung*</span>, Soojung Choi*, Suk Jun Lee, Seho Park, Hwiyoung Kim
+          </div>
+          <div class="pub-badges">
+            <span class="pub-badge pub-badge-review">Under Review at Medical Image Analysis</span>
+          </div>
+          <div class="pub-note">* Equal contribution</div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub-title">A Feasibility Study: Assessing the Use of a Pre-Trained Detection-Free Model on Cytologic Whole Slide Images for Efficient Prediction of Breast Cancer Recurrence Risk</span>
+          <div class="pub-authors">
+            <span class="self">Hyun Do Jung</span>, Suk Jun Lee, Seho Park, Hwiyoung Kim
+          </div>
+          <div class="pub-badges">
+            <span class="pub-badge pub-badge-venue">EMBC 2024</span>
+            <span class="pub-badge pub-badge-poster">Poster</span>
+          </div>
+        </li>
+
+      </ul>
+
+      <h3 class="pub-section-title">Clinical Collaborations</h3>
+      <ul class="pub-list">
+
+        <li class="pub-item">
+          <span class="pub-title">Multivariable Radiomics Model for Predicting Programmed Death-Ligand 1 Expression After Neoadjuvant Chemoradiotherapy in Esophageal Squamous Cell Carcinoma</span>
+          <div class="pub-authors">
+            <span class="self">Hyun Do Jung*</span>, Tae Hoon Lee*, Byoung Hyuck Kim*, Hye Seung Lee, Jaeman Son, Hwiyoung Kim, Hak Jae Kim
+          </div>
+          <div class="pub-badges">
+            <span class="pub-badge pub-badge-review">Under Review at Cancer Medicine</span>
+          </div>
+          <div class="pub-note">* Equal contribution</div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub-title">Deep Learning for Multi-Label Plaque Classification in Intravascular OCT: Ensuring Cross-Site Generalization through External Calibration</span>
+          <div class="pub-authors">
+            <span class="self">Hyun Do Jung*</span>, Seul-gee Lee*, Dongcho Park, Hwiyoung Kim, Jung-Sun Kim
+          </div>
+          <div class="pub-badges">
+            <span class="pub-badge pub-badge-submitted">Submitted to Artificial Intelligence in Medicine</span>
+          </div>
+          <div class="pub-note">* Equal contribution</div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Talks & Teaching -->
+    <section id="talks">
+      <h2>Talks &amp; Teaching</h2>
+      <div class="talk">
+        <span class="badge badge-instructor">Instructor</span>
+        <div class="talk-body">
+          <strong>Hands-on Workshop on Medical AI for Developers: Cancer MRI Analysis</strong><br>
+          <em>Korean Society of Artificial Intelligence in Medicine (대한의료인공지능학회) &middot; Oct 2024</em>
+        </div>
+      </div>
+      <div class="talk">
+        <span class="badge badge-presentation">Presentation</span>
+        <div class="talk-body">
+          <strong>Transfer Learning with a Pre-trained Model on Cytologic WSIs for Breast Cancer Recurrence Prediction</strong><br>
+          <em>Institute for Innovation in Digital Healthcare 2024 Symposium, Yonsei University Health System &middot; Nov 2024</em>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards">
+      <h2>Awards</h2>
+      <div class="award-item">
+        <span class="award-icon"><i class="fas fa-trophy"></i></span>
+        <div class="award-body">
+          <strong>Excellence Award (First Place)</strong><br>
+          <span class="award-meta">AI+Healthcare Research Training Program &middot; Seoul AI Hub &times; Seoul National University Hospital &times; KAIST &middot; Dec 2024</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li class="edu-item">
+          <span class="edu-icon"><i class="fas fa-graduation-cap"></i></span>
+          <div class="edu-body">
+            <strong>Yonsei University</strong><br>
+            <span class="edu-meta">Ph.D. in Artificial Intelligence (Integrated M.S./Ph.D.) &middot; Sep 2021 – Present</span>
+          </div>
+        </li>
+        <li class="edu-item">
+          <span class="edu-icon"><i class="fas fa-graduation-cap"></i></span>
+          <div class="edu-body">
+            <strong>University of Illinois at Urbana-Champaign (UIUC)</strong><br>
+            <span class="edu-meta">B.S. in Computer Engineering &middot; Aug 2012 – Dec 2020</span>
+          </div>
+        </li>
+        <li class="edu-item">
+          <span class="edu-icon"><i class="fas fa-globe"></i></span>
+          <div class="edu-body">
+            <strong>University of Southern California (USC)</strong><br>
+            <span class="edu-meta">International Education Program &middot; Summer 2024</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    Last updated: March 2026
+  </footer>
+
+</div>
+
+<script>
+// ── Theme toggle ──
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  const next = current === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateThemeIcon(next);
+});
+
+function updateThemeIcon(theme) {
+  const icon = themeToggle.querySelector('i');
+  icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+}
+
+// ── Progress bar ──
+window.addEventListener('scroll', () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+  document.getElementById('progressBar').style.width = progress + '%';
+});
+
+// ── Navbar scroll effect ──
+const navbar = document.getElementById('navbar');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  if (scrollTop > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+  lastScroll = scrollTop;
+});
+
+// ── Active nav link on scroll ──
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+
+function updateActiveLink() {
+  const scrollPos = window.scrollY + 100;
+  const atBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 50);
+  let currentSection = '';
+
+  if (atBottom) {
+    // At bottom of page, highlight the last section
+    currentSection = sections[sections.length - 1].getAttribute('id');
+  } else {
+    sections.forEach(section => {
+      if (section.offsetTop <= scrollPos) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+  }
+
+  // Skip auto-detection during click scroll
+  if (clickedLink) return;
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + currentSection) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveLink);
+
+// ── Smooth scroll ──
+let clickedLink = null;
+let clickTimeout = null;
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      // Force active state on clicked nav link
+      if (this.classList.contains('nav-link')) {
+        clickedLink = this;
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        clearTimeout(clickTimeout);
+        clickTimeout = setTimeout(() => { clickedLink = null; }, 800);
+      }
+      const offset = navbar.offsetHeight + 16;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
