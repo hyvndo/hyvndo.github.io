@@ -361,7 +361,7 @@ section h2 {
   margin-bottom: 0.2rem;
 }
 
-.pub-item .pub-title:hover { text-decoration: underline; }
+.pub-item .pub-title:hover { text-decoration: none; }
 
 .pub-authors {
   font-size: 0.85rem;
