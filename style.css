@@ -321,7 +321,9 @@ a { color: inherit; text-decoration: none; }
    heavier in dark mode. Shave it back to keep both sides feeling even. */
 [data-theme="dark"] .lede { font-weight: 560; }
 
-#about p {
+/* :not(.lede) matters — #about p and .content p both outrank a bare .lede
+   on specificity and would otherwise flatten the lede back to body size. */
+#about p:not(.lede) {
   font-family: var(--serif);
   font-size: 1.02rem;
   line-height: 1.66;
@@ -329,11 +331,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--prose);
   max-width: 66ch;
 }
-#about p + p { margin-top: 0.9rem; }
+#about p:not(.lede) + p { margin-top: 0.9rem; }
 #about p em { color: var(--ink); font-style: italic; font-weight: 500; }
 
-.content p { color: var(--muted); max-width: 68ch; }
-.content p + p { margin-top: 0.85rem; }
+.content p:not(.lede) { color: var(--muted); max-width: 68ch; }
+.content p:not(.lede) + p { margin-top: 0.85rem; }
 .content p em { color: var(--ink); font-style: italic; }
 
 /* Keyword tags */
@@ -559,7 +561,7 @@ footer {
   .sidebar { gap: 0.7rem 0.9rem; }
   .socials { display: none; }
   .lede { font-size: 1.5rem; max-width: none; line-height: 1.26; }
-  #about p { font-size: 0.98rem; }
+  #about p:not(.lede) { font-size: 0.98rem; }
   .content { padding: 2rem 1.2rem 3.5rem; }
   .content h2 { margin-bottom: 1.2rem; }
   .content section + section { margin-top: 2.6rem; }
