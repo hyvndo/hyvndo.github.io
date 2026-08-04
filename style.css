@@ -183,14 +183,15 @@ a { color: inherit; text-decoration: none; }
   display: block;
   color: var(--ink);
   font-weight: 500;
-  letter-spacing: -0.005em;
+  letter-spacing: normal;
 }
-.id-org { display: block; }
+.id-org { display: block; letter-spacing: normal; }
 
 .id-advisors {
   display: block;
   margin-top: 0.6rem;
-  font-size: 0.765rem;
+  font-size: 0.78rem;
+  letter-spacing: normal;
   color: var(--faint);
 }
 .id-label {
@@ -307,13 +308,14 @@ a { color: inherit; text-decoration: none; }
    more contrast than the reference material below it. */
 .lede {
   font-family: var(--serif);
-  font-size: 1.46rem;
-  font-weight: 500;
-  letter-spacing: -0.012em;
-  line-height: 1.34;
+  font-size: 1.95rem;
+  font-weight: 600;
+  letter-spacing: -0.023em;
+  line-height: 1.2;
   color: var(--ink);
-  margin-bottom: 1.25rem;
-  max-width: 19em;
+  margin-bottom: 1.5rem;
+  max-width: 15.5em;
+  text-wrap: balance;
 }
 
 #about p {
@@ -553,7 +555,7 @@ footer {
   body { font-size: 0.92rem; }
   .sidebar { gap: 0.7rem 0.9rem; }
   .socials { display: none; }
-  .lede { font-size: 1.24rem; max-width: none; line-height: 1.38; }
+  .lede { font-size: 1.5rem; max-width: none; line-height: 1.26; }
   #about p { font-size: 0.98rem; }
   .content { padding: 2rem 1.2rem 3.5rem; }
   .content h2 { margin-bottom: 1.2rem; }
