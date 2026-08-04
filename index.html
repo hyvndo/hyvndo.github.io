@@ -22,10 +22,14 @@
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <!-- Pretendard: Latin and Hangul drawn as one family, so 정현도 sits level with the English -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <!-- Source Serif 4: reserved for the bio prose -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
 </head>
@@ -46,9 +50,12 @@
     </div>
 
     <div class="id-role">
-      <strong>Ph.D. Student in Artificial Intelligence</strong><br>
-      Yonsei University<br>
-      <span class="advisors">Advised by Prof. Hwiyoung Kim &amp; Prof. Yujin Oh</span>
+      <strong>Ph.D. Student in Artificial Intelligence</strong>
+      <span class="id-org">Yonsei University</span>
+      <span class="id-advisors">
+        <span class="id-label">Advised by</span>
+        Prof. Hwiyoung Kim &amp; Prof. Yujin Oh
+      </span>
     </div>
 
     <div class="socials">

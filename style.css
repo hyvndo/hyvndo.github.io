@@ -13,6 +13,7 @@
 
   /* text */
   --ink:           #16181d;
+  --prose:         #3c424c;   /* bio paragraphs — darker than --muted for presence */
   --muted:         #626873;
   --faint:         #949aa5;
 
@@ -42,9 +43,14 @@
   --k4-bg: #edf2f8;  --k4-fg: #2c4a72;  /* talk       */
   --k5-bg: #eaf5ee;  --k5-fg: #26663f;  /* mentor     */
 
+  /* type */
+  --ui:    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+           'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --serif: 'Source Serif 4', 'Pretendard Variable', Pretendard, Georgia, serif;
+
   /* metrics */
-  --side-w:        296px;
-  --content-max:   820px;
+  --side-w:        320px;
+  --content-max:   830px;
   --radius:        8px;
 }
 
@@ -54,6 +60,7 @@
   --surface:       #1d2126;
 
   --ink:           #e8eaed;
+  --prose:         #bcc3cc;
   --muted:         #9ba2ac;
   --faint:         #6d747e;
 
@@ -85,7 +92,7 @@
 html { font-size: 16px; }
 
 body {
-  font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--ui);
   font-size: 0.95rem;
   line-height: 1.68;
   color: var(--ink);
@@ -167,13 +174,35 @@ a { color: inherit; text-decoration: none; }
 
 .id-role {
   font-size: 0.78rem;
-  line-height: 1.6;
+  line-height: 1.55;
   color: var(--muted);
   padding-top: 0.95rem;
   border-top: 1px solid var(--line);
 }
-.id-role strong { color: var(--ink); font-weight: 500; }
-.id-role .advisors { color: var(--faint); }
+.id-role strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+.id-org { display: block; }
+
+.id-advisors {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.765rem;
+  color: var(--faint);
+}
+.id-label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--faint);
+  opacity: 0.75;
+  margin-bottom: 0.05rem;
+}
 
 /* Socials + theme toggle */
 .socials {
@@ -274,15 +303,29 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 1.5rem;
 }
 
+/* The bio is the one place that has to persuade, so it gets a serif and
+   more contrast than the reference material below it. */
 .lede {
-  font-size: 1.3rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.45;
+  font-family: var(--serif);
+  font-size: 1.46rem;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.34;
   color: var(--ink);
-  margin-bottom: 1.15rem;
-  max-width: 32ch;
+  margin-bottom: 1.25rem;
+  max-width: 19em;
 }
+
+#about p {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.66;
+  letter-spacing: 0.002em;
+  color: var(--prose);
+  max-width: 66ch;
+}
+#about p + p { margin-top: 0.9rem; }
+#about p em { color: var(--ink); font-style: italic; font-weight: 500; }
 
 .content p { color: var(--muted); max-width: 68ch; }
 .content p + p { margin-top: 0.85rem; }
@@ -510,7 +553,8 @@ footer {
   body { font-size: 0.92rem; }
   .sidebar { gap: 0.7rem 0.9rem; }
   .socials { display: none; }
-  .lede { font-size: 1.14rem; max-width: none; }
+  .lede { font-size: 1.24rem; max-width: none; line-height: 1.38; }
+  #about p { font-size: 0.98rem; }
   .content { padding: 2rem 1.2rem 3.5rem; }
   .content h2 { margin-bottom: 1.2rem; }
   .content section + section { margin-top: 2.6rem; }
