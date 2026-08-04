@@ -3,6 +3,8 @@ _site
 .claude/
 .DS_store
 .idea
+preview/
+*academicCV.pdf
 .jekyll-cache
 .jekyll-metadata
 .ruby-version
