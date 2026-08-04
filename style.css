@@ -412,16 +412,22 @@ section > .pub-section-title:first-of-type { margin-top: 0; }
 .pub-badge-oral      { background: var(--o-bg); color: var(--o-fg); font-weight: 600; }
 .pub-badge-poster    { background: var(--p-bg); color: var(--p-fg); }
 
-.pub-link {
+/* Outbound links are pills, never underlined titles — one affordance everywhere */
+.pub-link,
+.ext-link {
+  display: inline-block;
   font-size: 0.68rem;
   font-weight: 500;
   color: var(--accent-ink);
   border: 1px solid currentColor;
   padding: 0.16rem 0.48rem;
   border-radius: 4px;
-  transition: background 0.16s ease, color 0.16s ease;
+  transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease;
 }
-.pub-link:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pub-link:hover,
+.ext-link:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.ext-link { margin-top: 0.45rem; }
+.ext-link::after { content: ' \2197'; font-size: 0.9em; opacity: 0.7; }
 
 .pub-note {
   font-size: 0.72rem;
@@ -453,8 +459,6 @@ section > .pub-section-title:first-of-type { margin-top: 0; }
 
 .talk-body { flex: 1; min-width: 0; font-size: 0.89rem; line-height: 1.5; }
 .talk-body strong { font-weight: 500; }
-.talk-body a { border-bottom: 1px solid var(--line-strong); transition: color 0.16s ease, border-color 0.16s ease; }
-.talk-body a:hover { color: var(--accent); border-color: var(--accent); }
 .talk-body em {
   display: block;
   font-style: normal;
