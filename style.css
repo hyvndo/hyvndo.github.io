@@ -317,6 +317,9 @@ a { color: inherit; text-decoration: none; }
   max-width: 15.5em;
   text-wrap: balance;
 }
+/* Light text on a dark ground blooms optically, so the same weight reads
+   heavier in dark mode. Shave it back to keep both sides feeling even. */
+[data-theme="dark"] .lede { font-weight: 560; }
 
 #about p {
   font-family: var(--serif);
