@@ -426,7 +426,8 @@ section > .pub-section-title:first-of-type { margin-top: 0; }
 }
 .pub-link:hover,
 .ext-link:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
-.ext-link { margin-top: 0.45rem; }
+/* Sits inline after the meta line rather than claiming a third row */
+.ext-link { margin-left: 0.5rem; line-height: 1; vertical-align: 0.04em; }
 .ext-link::after { content: ' \2197'; font-size: 0.9em; opacity: 0.7; }
 
 .pub-note {
