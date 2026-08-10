@@ -413,26 +413,31 @@ section > .pub-section-title:first-of-type { margin-top: 0; }
 .pub-badge-poster    { background: var(--p-bg); color: var(--p-fg); }
 
 /* Outbound links are pills, never underlined titles — one affordance everywhere */
+/* Shared look. Box metrics differ by context and are set below: a link in the
+   badge row has to match the badge box, an inline one has to sit on a baseline. */
 .pub-link,
 .ext-link {
   display: inline-block;
   font-size: 0.68rem;
   font-weight: 500;
-  /* 1.35 leaves the glyphs optically centred in the box; at line-height 1 the
-     text rides high because there are no descenders to fill the lower half. */
-  line-height: 1.35;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
   color: var(--accent-ink);
   border: 1px solid currentColor;
-  padding: 0.1rem 0.5rem;
   border-radius: 4px;
   transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease;
 }
+
+/* Same outer box as .pub-badge — padding is reduced by the 1px border the
+   badges do not have, and line-height is left to inherit exactly as they do. */
+.pub-link { padding: calc(0.2rem - 1px) calc(0.52rem - 1px); }
 .pub-link:hover,
 .ext-link:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
-/* Sits inline after the meta line rather than claiming a third row. No
+/* Sits inline after the meta line rather than claiming a third row, so it
+   needs tighter leading than .pub-link to stay inside the text's line box. No
    vertical-align override — default baseline alignment lines the pill's text
    up with the surrounding text, which is what actually reads as straight. */
-.ext-link { margin-left: 0.5rem; }
+.ext-link { line-height: 1.35; padding: 0.1rem 0.5rem; margin-left: 0.5rem; }
 .ext-link::after { content: '\00A0\2197'; font-size: 0.92em; opacity: 0.75; }
 
 .pub-note {
