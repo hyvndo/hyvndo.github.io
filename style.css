@@ -42,6 +42,7 @@
   --k3-bg: #f2edf8;  --k3-fg: #5b3d86;  /* co-author  */
   --k4-bg: #edf2f8;  --k4-fg: #2c4a72;  /* talk       */
   --k5-bg: #eaf5ee;  --k5-fg: #26663f;  /* mentor     */
+  --k6-bg: #e5f2f1;  --k6-fg: #1c605c;  /* lecturer   */
 
   /* type */
   --ui:    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
@@ -84,6 +85,7 @@
   --k3-bg: #29223a;  --k3-fg: #b79ade;
   --k4-bg: #1c2a3a;  --k4-fg: #9cbde2;
   --k5-bg: #1a3327;  --k5-fg: #8fd0a8;
+  --k6-bg: #16302f;  --k6-fg: #7cc7c1;
 }
 
 /* ── Reset & base ─────────────────────────────────────────────────── */
@@ -467,6 +469,7 @@ section > .pub-section-title:first-of-type { margin-top: 0; }
 .badge-book         { background: var(--k3-bg); color: var(--k3-fg); }
 .badge-presentation { background: var(--k4-bg); color: var(--k4-fg); }
 .badge-mentor       { background: var(--k5-bg); color: var(--k5-fg); }
+.badge-lecturer     { background: var(--k6-bg); color: var(--k6-fg); }
 
 .talk-body { flex: 1; min-width: 0; font-size: 0.89rem; line-height: 1.5; }
 .talk-body strong { font-weight: 500; }
